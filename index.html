@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="https://static.thenounproject.com/png/1495285-200.png">
+    <title>DG Clock</title>
+</head>
+<body>
+    <div id="video-container">
+        <iframe id="youtube-player" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div id="app-overlay">
+        <div id="top-barbackground">
+            <div id="top-bar">
+                <div id="city-info">City: <span id="city-name">—</span></div>
+                <div id="timezone-info">Timezone: <span id="timezone">—</span></div>
+            </div>
+            <div id="city-buttons"></div>
+        </div>
+        
+        <div id="clock-container">
+            <div id="clock">00:00:00</div>
+        </div>
+        <div id="data-container">
+            <div id="day">—</div>
+            <div id="month">—</div>
+            <div id="num">—</div>
+            <div id="year">—</div>
+        </div>
+    </div>
+</body>
+</html>
