@@ -26,7 +26,7 @@ https://hayvenx.github.io/DGClock/
 4. Tokyo (`Asia/Tokyo`)
 5. Sydney (`Australia/Sydney`)
 
-> **⚠️ Note on Backgrounds:** This project relies on live YouTube streams for dynamic backgrounds. If a specific city's background fails to load, the original stream may have ended or gone offline. In such cases, the video ID in the source code will need to be manually updated to a new live stream.
+> **⚠️ Note on Backgrounds:** This project relies on live YouTube streams for dynamic backgrounds. If a specific city's background fails to load, the original stream may have ended or gone offline. In such cases, the video ID in the source code will need to be manually updated to a new live stream. Additionally, since the app uses the official YouTube Embedded API, occasional YouTube ads may appear before the stream depending on the channel's monetization settings.
 
 ## 💻 Getting Started
 To run this project locally:
