@@ -1,4 +1,4 @@
-# DG Clock
+# 🕑 DG Clock
 
 A web application that displays the current time and date in major global cities against a background of live YouTube streams.
 
