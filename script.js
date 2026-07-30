@@ -20,8 +20,8 @@ let activeCity = cities[0]
 function init() {
     renderCityButtons()
     selectCity(activeCity)
-    setTimeout(UpdateDate, 0)
-    setInterval(UpdateDate, 1000)
+    setTimeout(updateDate, 0)
+    setInterval(updateDate, 1000)
 }
 
 function renderCityButtons() {
@@ -41,7 +41,7 @@ function selectCity(city) {
     updatePlayer(city.youtubeId)
     updateCityLabels()
     highlightActiveButton()
-    UpdateDate()
+    updateDate()
 }
 
 function updatePlayer(videoId) {
@@ -68,7 +68,7 @@ function highlightActiveButton() {
     })
 }
 
-function UpdateDate() {
+function updateDate() {
     const date = new Date()
     const time = date.toLocaleTimeString('en-US', {
         timeZone: activeCity.timezone,
