@@ -36,6 +36,9 @@ window.onYouTubeIframeAPIReady = function() {
             'rel': 0,
             'modestbranding': 1,
             'loop': 1,
+            'cc_load_policy': 0,
+            'iv_load_policy': 3,
+            'disablekb': 1,
             'playlist': activeCity.youtubeId 
         },
         events: {
