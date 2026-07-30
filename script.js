@@ -29,7 +29,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 window.onYouTubeIframeAPIReady = function() {
     player = new YT.Player('youtube-player', {
         videoId: activeCity.youtubeId,
-        playerParams: {
+        playerVars: {
             'autoplay': 1,
             'mute': 1,
             'controls': 0,
