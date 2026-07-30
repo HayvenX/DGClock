@@ -1,4 +1,3 @@
-// const playerFrame = document.getElementById('youtube-player')
 const clock = document.getElementById('clock')
 const day = document.getElementById('day')
 const month = document.getElementById('month')
@@ -52,8 +51,6 @@ window.onYouTubeIframeAPIReady = function() {
 
 function init() {
     renderCityButtons()
-    // selectCity(activeCity)
-    // setTimeout(updateDate, 0)
     updateCityLabels()
     highlightActiveButton()
     updateDate()
@@ -79,18 +76,6 @@ function selectCity(city) {
     highlightActiveButton()
     updateDate()
 }
-
-// function updatePlayer(videoId) {
-//     const params = new URLSearchParams({
-//         autoplay: '1',
-//         mute: '1',
-//         controls: '0',
-//         rel: '0',
-//         modestbranding: '1',
-//         showinfo: '0'
-//     })
-//     playerFrame.src = `https://www.youtube.com/embed/${videoId}?${params}`
-// }
 
 function updatePlayer(videoId) {
     if (isPlayerReady && player && typeof player.loadVideoById === 'function') {
