@@ -1,4 +1,4 @@
-const playerFrame = document.getElementById('youtube-player')
+// const playerFrame = document.getElementById('youtube-player')
 const clock = document.getElementById('clock')
 const day = document.getElementById('day')
 const month = document.getElementById('month')
@@ -17,11 +17,44 @@ const cities = [
 ]
 let activeCity = cities[0]
 
+let player
+let isPlayerReady = false
+let timerId
+
+const tag = document.createElement('script')
+tag.src = "https://www.youtube.com/iframe_api"
+const firstScriptTag = document.getElementsByTagName('script')[0]
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+
+window.onYouTubeIframeAPIReady = function() {
+    player = new YT.Player('youtube-player', {
+        videoId: activeCity.youtubeId,
+        playerParams: {
+            'autoplay': 1,
+            'mute': 1,
+            'controls': 0,
+            'rel': 0,
+            'modestbranding': 1,
+            'loop': 1,
+            'playlist': activeCity.youtubeId 
+        },
+        events: {
+            'onReady': (event) => {
+                isPlayerReady = true;
+                event.target.playVideo();
+            }
+        }
+    });
+};
+
 function init() {
     renderCityButtons()
-    selectCity(activeCity)
-    setTimeout(updateDate, 0)
-    setInterval(updateDate, 1000)
+    // selectCity(activeCity)
+    // setTimeout(updateDate, 0)
+    updateCityLabels()
+    highlightActiveButton()
+    updateDate()
+    timerId = setInterval(updateDate, 1000)
 }
 
 function renderCityButtons() {
@@ -44,16 +77,22 @@ function selectCity(city) {
     updateDate()
 }
 
+// function updatePlayer(videoId) {
+//     const params = new URLSearchParams({
+//         autoplay: '1',
+//         mute: '1',
+//         controls: '0',
+//         rel: '0',
+//         modestbranding: '1',
+//         showinfo: '0'
+//     })
+//     playerFrame.src = `https://www.youtube.com/embed/${videoId}?${params}`
+// }
+
 function updatePlayer(videoId) {
-    const params = new URLSearchParams({
-        autoplay: '1',
-        mute: '1',
-        controls: '0',
-        rel: '0',
-        modestbranding: '1',
-        showinfo: '0'
-    })
-    playerFrame.src = `https://www.youtube.com/embed/${videoId}?${params}`
+    if (isPlayerReady && player && typeof player.loadVideoById === 'function') {
+        player.loadVideoById({ 'videoId': videoId });
+    }
 }
 
 function updateCityLabels() {
