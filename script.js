@@ -6,8 +6,7 @@ const citiesData = {
             { name: 'Chicago', youtubeId: 'O0UGT7AT3aw', timezone: 'America/Chicago' },
             { name: 'New York', youtubeId: 'z-jYdOIKcTQ', timezone: 'America/New_York' },
             { name: 'Washington', youtubeId: 'oDCAAfOSqvA', timezone: 'America/New_York' },
-            { name: 'Miami', youtubeId: 'PeYZZinH1wI', timezone: 'America/New_York' }
-        ]
+            { name: 'Miami', youtubeId: 'PeYZZinH1wI', timezone: 'America/New_York' }]
     },
     "Europe": {
         "Ireland": [{ name: 'Dublin', youtubeId: '3nyPER2kzqk', timezone: 'Europe/Dublin' }],
