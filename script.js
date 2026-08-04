@@ -9,11 +9,11 @@ const timezoneName = document.getElementById('timezone')
 
 const cities = [
     { name: 'San Francisco', youtubeId: 'CXYr04BWvmc', timezone: 'America/Los_Angeles' },
-    { name: 'Las Vegas', youtubeId: '_-Qg5jD-PfA', timezone: 'America/Los_Angeles' },
+    { name: 'Las Vegas', youtubeId: '5XXJN_Ep88E', timezone: 'America/Los_Angeles' },
     { name: 'Chicago', youtubeId: 'O0UGT7AT3aw', timezone: 'America/Chicago' },
     { name: 'New York', youtubeId: 'z-jYdOIKcTQ', timezone: 'America/New_York' },
     { name: 'Washington', youtubeId: 'oDCAAfOSqvA', timezone: 'America/New_York' },
-    { name: 'Miami', youtubeId: 'g5BS95j2rmM', timezone: 'America/New_York' },
+    { name: 'Miami', youtubeId: 'AAofne4ky2I', timezone: 'America/New_York' },
     { name: 'Dublin', youtubeId: '3nyPER2kzqk', timezone: 'Europe/Dublin' },
     { name: 'London', youtubeId: 'yrzqCc0wNQs', timezone: 'Europe/London' },
     { name: 'Paris', youtubeId: 'OzYp4NRZlwQ', timezone: 'Europe/Paris' },
