@@ -122,7 +122,8 @@ body {
 }
 
 #city-info span,
-#timezone-info span {
+#timezone-info span, 
+#weather-info span {
     color: #fff;
     font-weight: 700;
 }
