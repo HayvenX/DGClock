@@ -30,7 +30,7 @@ const year = document.getElementById('year')
 const cityName = document.getElementById('city-name')
 const timezoneName = document.getElementById('timezone')
 
-let activeCity = citiesData["Americas"]["USA"][0]
+let activeCity = citiesData["America"]["USA"][0]
 let player
 let isPlayerReady = false
 let timerId
