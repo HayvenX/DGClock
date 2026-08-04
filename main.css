@@ -186,6 +186,25 @@ body {
     border-color: rgba(255, 255, 255, 0.3);
 }
 
+#sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    pointer-events: none; /* Щоб не блокував кліки, коли прихований */
+    transition: opacity 0.3s ease;
+    z-index: 90; /* Менше ніж у #sidebar (100), але більше за інший контент */
+}
+
+#sidebar-overlay.show {
+    opacity: 1;
+    pointer-events: auto; /* Вмикаємо кліки, коли меню відкрите */
+}
+
 #clock-container {
     display: flex;
     justify-content: center;
