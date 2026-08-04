@@ -8,11 +8,19 @@ const cityName = document.getElementById('city-name')
 const timezoneName = document.getElementById('timezone')
 
 const cities = [
+    { name: 'San Francisco', youtubeId: 'CXYr04BWvmc', timezone: 'America/Los_Angeles' },
+    { name: 'Las Vegas', youtubeId: '_-Qg5jD-PfA', timezone: 'America/Los_Angeles' },
+    { name: 'Chicago', youtubeId: 'O0UGT7AT3aw', timezone: 'America/Chicago' },
     { name: 'New York', youtubeId: 'z-jYdOIKcTQ', timezone: 'America/New_York' },
-    { name: 'Tokyo', youtubeId: '_k-5U7IeK8g', timezone: 'Asia/Tokyo' },
+    { name: 'Washington', youtubeId: 'oDCAAfOSqvA', timezone: 'America/New_York' },
+    { name: 'Miami', youtubeId: 'g5BS95j2rmM', timezone: 'America/New_York' },
+    { name: 'Dublin', youtubeId: '3nyPER2kzqk', timezone: 'Europe/Dublin' },
+    { name: 'London', youtubeId: 'yrzqCc0wNQs', timezone: 'Europe/London' },
     { name: 'Paris', youtubeId: 'OzYp4NRZlwQ', timezone: 'Europe/Paris' },
-    { name: 'Sydney', youtubeId: '5uZa3-RMFos', timezone: 'Australia/Sydney' },
-    { name: 'London', youtubeId: 'yrzqCc0wNQs', timezone: 'Europe/London' }
+    { name: 'Tallinn', youtubeId: 'VhVgZi2lGv0', timezone: 'Europe/Tallinn' },
+    { name: 'Jerusalem', youtubeId: '77akujLn4k8', timezone: 'Asia/Jerusalem' },
+    { name: 'Tokyo', youtubeId: '_k-5U7IeK8g', timezone: 'Asia/Tokyo' },
+    { name: 'Sydney', youtubeId: '5uZa3-RMFos', timezone: 'Australia/Sydney' }
 ]
 let activeCity = cities[0]
 
