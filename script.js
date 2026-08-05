@@ -197,7 +197,9 @@ document.querySelectorAll('#temp-toggle .toggle-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         isCelsius = e.target.dataset.val === 'c'
         localStorage.setItem('isCelsius', isCelsius)
+        
         updateTogglesUI()
+        fetchWeather(activeCity.lat, activeCity.lon)
     })
 })
 
