@@ -1,23 +1,24 @@
 const citiesData = {
     "America": {
-        "USA": [
-            { name: 'San Francisco', youtubeId: 'CXYr04BWvmc', timezone: 'America/Los_Angeles' },
-            { name: 'Las Vegas', youtubeId: '_rmUXOHSf0w', timezone: 'America/Los_Angeles' },
-            { name: 'Chicago', youtubeId: 'O0UGT7AT3aw', timezone: 'America/Chicago' },
-            { name: 'New York', youtubeId: 'z-jYdOIKcTQ', timezone: 'America/New_York' },
-            { name: 'Washington', youtubeId: 'oDCAAfOSqvA', timezone: 'America/New_York' },
-            { name: 'Miami', youtubeId: 'PeYZZinH1wI', timezone: 'America/New_York' }]
+        "USA": { code: "us", cities: [
+            { name: 'San Francisco', emoji: '🌉', youtubeId: 'CXYr04BWvmc', timezone: 'America/Los_Angeles' },
+            { name: 'Las Vegas', emoji: '🎰', youtubeId: '_rmUXOHSf0w', timezone: 'America/Los_Angeles' },
+            { name: 'Chicago', emoji: '🍕', youtubeId: 'O0UGT7AT3aw', timezone: 'America/Chicago' },
+            { name: 'New York', emoji: '🗽', youtubeId: 'z-jYdOIKcTQ', timezone: 'America/New_York' },
+            { name: 'Washington', emoji: '🏛️', youtubeId: 'oDCAAfOSqvA', timezone: 'America/New_York' },
+            { name: 'Miami', emoji: '🌴', youtubeId: 'PeYZZinH1wI', timezone: 'America/New_York' }
+        ]}
     },
     "Europe": {
-        "Ireland": [{ name: 'Dublin', youtubeId: '3nyPER2kzqk', timezone: 'Europe/Dublin' }],
-        "UK": [{ name: 'London', youtubeId: 'M3EYAY2MftI', timezone: 'Europe/London' }],
-        "France": [{ name: 'Paris', youtubeId: 'OzYp4NRZlwQ', timezone: 'Europe/Paris' }],
-        "Estonia": [{ name: 'Tallinn', youtubeId: 'VhVgZi2lGv0', timezone: 'Europe/Tallinn' }]
+        "Ireland": { code: "ie", cities: [{ name: 'Dublin', emoji: '☘️', youtubeId: '3nyPER2kzqk', timezone: 'Europe/Dublin' }]},
+        "UK": { code: "gb", cities: [{ name: 'London', emoji: '💂', youtubeId: 'M3EYAY2MftI', timezone: 'Europe/London' }]},
+        "France": { code: "fr", cities: [{ name: 'Paris', emoji: '🗼', youtubeId: 'OzYp4NRZlwQ', timezone: 'Europe/Paris' }]},
+        "Estonia": { code: "ee", cities: [{ name: 'Tallinn', emoji: '🏰', youtubeId: 'VhVgZi2lGv0', timezone: 'Europe/Tallinn' }]}
     },
     "Asia & Pacific": {
-        "Israel": [{ name: 'Jerusalem', youtubeId: '77akujLn4k8', timezone: 'Asia/Jerusalem' }],
-        "Japan": [{ name: 'Tokyo', youtubeId: '_k-5U7IeK8g', timezone: 'Asia/Tokyo' }],
-        "Australia": [{ name: 'Sydney', youtubeId: '5uZa3-RMFos', timezone: 'Australia/Sydney' }]
+        "Israel": { code: "il", cities: [{ name: 'Jerusalem', emoji: '🕍', youtubeId: '77akujLn4k8', timezone: 'Asia/Jerusalem' }]},
+        "Japan": { code: "jp", cities: [{ name: 'Tokyo', emoji: '🌸', youtubeId: '_k-5U7IeK8g', timezone: 'Asia/Tokyo' }]},
+        "Australia": { code: "au", cities: [{ name: 'Sydney', emoji: '🦘', youtubeId: '5uZa3-RMFos', timezone: 'Australia/Sydney' }]}
     }
 }
 
@@ -103,15 +104,15 @@ function renderAccordion() {
         const contentDiv = document.createElement('div')
         contentDiv.className = 'accordion-content'
 
-        for (const [country, cities] of Object.entries(countries)) {
+        for (const [countryName, countryData] of Object.entries(countries)) {
             const countryTitle = document.createElement('div')
             countryTitle.className = 'country-title'
-            countryTitle.textContent = country
+            countryTitle.innerHTML = `<img src="https://flagcdn.com/h20/${countryData.code}.png" alt="flag"> ${countryName}`
             contentDiv.appendChild(countryTitle)
 
-            cities.forEach(city => {
+            countryData.cities.forEach(city => {
                 const cityBtn = document.createElement('button')
-                cityBtn.textContent = city.name
+                cityBtn.textContent = `${city.emoji} ${city.name}`
                 cityBtn.dataset.cityName = city.name
                 
                 if (city.name === activeCity.name) {
@@ -162,9 +163,16 @@ function updatePlayer(videoId) {
     }
 }
 
+function getGlobeEmoji(timezone) {
+    if (timezone.startsWith('America')) return '🌎';
+    if (timezone.startsWith('Asia') || timezone.startsWith('Australia') || timezone.startsWith('Pacific')) return '🌏';
+    return '🌍';
+}
+
 function updateCityLabels() {
-    cityName.textContent = activeCity.name
-    timezoneName.textContent = activeCity.timezone
+    const globe = getGlobeEmoji(activeCity.timezone)
+    cityName.textContent = `${activeCity.emoji} ${activeCity.name}`
+    timezoneName.textContent = `${globe} ${activeCity.timezone}`
 }
 
 function updateDate() {
