@@ -186,11 +186,11 @@ async function fetchWeather(lat, lon) {
         const tempUnit = isCelsius ? 'celsius' : 'fahrenheit'
         const unitSymbol = isCelsius ? '°C' : '°F'
         
-        const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&temperature_unit=${tempUnit}`)
+        const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&temperature_unit=${tempUnit}`)
         if (!response.ok) throw new Error('Помилка API')
         
         const data = await response.json()
-        const temp = Math.round(data.current_weather.temperature)
+        const temp = Math.round(data.current.temperature_2m)
         const code = data.current_weather.weathercode
         
         tempElement.textContent = `${temp}${unitSymbol}`
@@ -261,7 +261,8 @@ function updateDate() {
         timeZone: activeCity.timezone,
         hour: '2-digit',
         minute: '2-digit',
-        second: '2-digit'
+        second: '2-digit',
+        hour12: !is24hour
     })
     clock.innerText = time
 
