@@ -191,6 +191,8 @@ body {
 }
 
 .country-title img {
+    height: 0.95rem; 
+    width: auto;
     border-radius: 2px;
 }
 
