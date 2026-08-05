@@ -186,7 +186,7 @@ async function fetchWeather(lat, lon) {
         const tempUnit = isCelsius ? 'celsius' : 'fahrenheit'
         const unitSymbol = isCelsius ? '°C' : '°F'
         
-        const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`)
+        const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&temperature_unit=${tempUnit}`)
         if (!response.ok) throw new Error('Помилка API')
         
         const data = await response.json()
