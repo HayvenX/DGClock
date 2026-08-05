@@ -43,6 +43,7 @@ body {
 
 #top-bar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
     padding: 18px 22px;
@@ -52,7 +53,6 @@ body {
 
 .info-group {
     display: flex;
-    justify-content: space-between;
     gap: 20px;
 }
 
