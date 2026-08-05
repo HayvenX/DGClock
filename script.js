@@ -28,8 +28,8 @@ const num = document.getElementById('num')
 const year = document.getElementById('year')
 const cityName = document.getElementById('city-name')
 const timezoneName = document.getElementById('timezone')
-const hideUiBtn = document.getElementById('hide-ui-btn')
 const appOverlay = document.getElementById('app-overlay')
+const hideUiBtn = document.getElementById('hide-ui-btn')
 const hideHint = document.getElementById('hide-hint')
 
 
