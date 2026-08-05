@@ -28,12 +28,17 @@ const num = document.getElementById('num')
 const year = document.getElementById('year')
 const cityName = document.getElementById('city-name')
 const timezoneName = document.getElementById('timezone')
+const hideUiBtn = document.getElementById('hide-ui-btn')
+const appOverlay = document.getElementById('app-overlay')
+const hideHint = document.getElementById('hide-hint')
+
 
 const savedCityName = localStorage.getItem('lastCity')
 let activeCity = getCityByName(savedCityName) || citiesData["America"]["USA"].cities[0]
 let player
-let isPlayerReady = false
 let timerId
+let isUiHidden = false
+let isPlayerReady = false
 let isCelsius = localStorage.getItem('isCelsius') === 'false' ? false : true
 let is24Hour = localStorage.getItem('is24Hour') === 'false' ? false : true
 
@@ -67,10 +72,11 @@ window.onYouTubeIframeAPIReady = function() {
 }
 
 function init() {
+    updateDate()
     setupSidebar()
     renderAccordion()
     updateCityLabels()
-    updateDate()
+    updateTogglesUI()
     fetchWeather(activeCity.lat, activeCity.lon)
     timerId = setInterval(updateDate, 1000)
 }
@@ -226,7 +232,27 @@ document.querySelectorAll('#time-toggle .toggle-btn').forEach(btn => {
         updateDate()
     })
 })
-updateTogglesUI()
+
+hideUiBtn.addEventListener('click', (e) => {
+    e.stopPropagation()
+    closeSidebar()
+    
+    appOverlay.classList.add('hidden')
+    isUiHidden = true
+
+    hideHint.classList.add('show')
+    setTimeout(() => {
+        hideHint.classList.remove('show')
+    }, 3000)
+})
+
+document.addEventListener('click', () => {
+    if (isUiHidden) {
+        appOverlay.classList.remove('hidden')
+        hideHint.classList.remove('show')
+        isUiHidden = false
+    }
+})
 
 function updatePlayer(videoId) {
     if (isPlayerReady && player && typeof player.loadVideoById === 'function') {
