@@ -262,7 +262,7 @@ function updateDate() {
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
-        hour12: !is24hour
+        hour12: !is24Hour
     })
     clock.innerText = time
 
