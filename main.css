@@ -181,11 +181,18 @@ body {
 }
 
 .country-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: rgba(255, 255, 255, 0.4);
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 10px 0 2px 10px;
+}
+
+.country-title img {
+    border-radius: 2px;
 }
 
 .accordion-content button {
