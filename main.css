@@ -45,7 +45,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
     padding: 18px 22px;
     background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(10px);
@@ -53,7 +52,7 @@ body {
 
 .info-group {
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 #menu-btn {
