@@ -107,7 +107,7 @@ function renderAccordion() {
         for (const [countryName, countryData] of Object.entries(countries)) {
             const countryTitle = document.createElement('div')
             countryTitle.className = 'country-title'
-            countryTitle.innerHTML = `<img src="https://flagcdn.com/h20/${countryData.code}.png" alt="flag"> ${countryName}`
+            countryTitle.innerHTML = `<img src="https://flagcdn.com/w20/${countryData.code}.png" alt="flag"> ${countryName}`
             contentDiv.appendChild(countryTitle)
 
             countryData.cities.forEach(city => {
