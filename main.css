@@ -39,6 +39,12 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    transition: opacity 0.4s ease;
+}
+
+#app-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 #top-bar {
@@ -340,6 +346,30 @@ body {
 #weather-info span {
     color: #fff;
     font-weight: 700;
+}
+
+#hide-hint {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+#hide-hint.show {
+    opacity: 1;
 }
 
 @media (max-width: 720px) {
