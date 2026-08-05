@@ -168,6 +168,9 @@ async function fetchWeather(lat, lon) {
     iconElement.textContent = ''
 
     try {
+        const tempUnit = isCelsius ? 'celsius' : 'fahrenheit'
+        const unitSymbol = isCelsius ? '°C' : '°F'
+        
         const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`)
         if (!response.ok) throw new Error('Помилка API')
         
@@ -175,7 +178,7 @@ async function fetchWeather(lat, lon) {
         const temp = Math.round(data.current_weather.temperature)
         const code = data.current_weather.weathercode
         
-        tempElement.textContent = `${temp}°C`
+        tempElement.textContent = `${temp}${unitSymbol}`
         iconElement.textContent = getWeatherEmoji(code)
     } catch (error) {
         tempElement.textContent = 'N/A'
