@@ -191,7 +191,7 @@ async function fetchWeather(lat, lon) {
         
         const data = await response.json()
         const temp = Math.round(data.current.temperature_2m)
-        const code = data.current_weather.weathercode
+        const code = data.current.weather_code
         
         tempElement.textContent = `${temp}${unitSymbol}`
         iconElement.textContent = getWeatherEmoji(code)
@@ -223,6 +223,7 @@ document.querySelectorAll('#time-toggle .toggle-btn').forEach(btn => {
         is24Hour = e.target.dataset.val === '24'
         localStorage.setItem('is24Hour', is24Hour)
         updateTogglesUI()
+        updateDate()
     })
 })
 updateTogglesUI()
