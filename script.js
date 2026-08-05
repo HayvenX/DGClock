@@ -29,7 +29,8 @@ const year = document.getElementById('year')
 const cityName = document.getElementById('city-name')
 const timezoneName = document.getElementById('timezone')
 
-let activeCity = citiesData["America"]["USA"].cities[0]
+const savedCityName = localStorage.getItem('lastCity')
+let activeCity = getCityByName(savedCityName) || citiesData["America"]["USA"].cities[0]
 let player
 let isPlayerReady = false
 let timerId
@@ -144,6 +145,8 @@ function renderAccordion() {
 
 function selectCity(city) {
     activeCity = city
+    localStorage.setItem('lastCity', city.name)
+    
     updatePlayer(city.youtubeId)
     updateCityLabels()
     updateDate()
@@ -158,6 +161,18 @@ function selectCity(city) {
     if (newActiveBtn) {
         newActiveBtn.classList.add('active-city')
     }
+}
+
+function getCityByName(cityName) {
+    if (!cityName) return null
+    
+    for (const region in citiesData) {
+        for (const country in citiesData[region]) {
+            const foundCity = citiesData[region][country].cities.find(c => c.name === cityName)
+            if (foundCity) return foundCity
+        }
+    }
+    return null
 }
 
 async function fetchWeather(lat, lon) {
