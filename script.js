@@ -40,27 +40,6 @@ tag.src = "https://www.youtube.com/iframe_api"
 const firstScriptTag = document.getElementsByTagName('script')[0]
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 
-function resizeVideo() {
-    const iframe = document.getElementById('youtube-player')
-    if (!iframe) return
-
-    const windowRatio = window.innerWidth / window.innerHeight
-    const videoRatio = 16 / 9
-    
-    let newWidth, newHeight
-
-    if (windowRatio > videoRatio) {
-        newWidth = window.innerWidth
-        newHeight = window.innerWidth / videoRatio
-    } else {
-        newWidth = window.innerHeight * videoRatio
-        newHeight = window.innerHeight
-    }
-
-    iframe.style.width = `${newWidth * 1.02}px`
-    iframe.style.height = `${newHeight * 1.02}px`
-}
-
 window.onYouTubeIframeAPIReady = function() {
     player = new YT.Player('youtube-player', {
         videoId: activeCity.youtubeId,
@@ -80,7 +59,6 @@ window.onYouTubeIframeAPIReady = function() {
             'onReady': (event) => {
                 isPlayerReady = true
                 event.target.playVideo()
-                resizeVideo()
             }
         }
     })
@@ -220,7 +198,5 @@ function updateDate() {
     num.innerText = parts.find((part) => part.type === 'day')?.value || ''
     year.innerText = parts.find((part) => part.type === 'year')?.value || ''
 }
-
-window.addEventListener('resize', resizeVideo)
 
 init()
