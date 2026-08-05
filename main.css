@@ -18,12 +18,15 @@ body {
     z-index: -1;
 }
 
-#video-container #youtube-player {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    transform: scale(1.15) translateY(-6%);
+#youtube-player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.77vh;
     pointer-events: none;
     border: 0;
     background: #000;
@@ -49,6 +52,7 @@ body {
 
 .info-group {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
 }
 
