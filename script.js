@@ -19,7 +19,7 @@ const citiesData = {
         "Japan": { code: "jp", cities: [{ name: 'Tokyo', lat: 35.68, lon: 139.69, emoji: '🌸', youtubeId: '_k-5U7IeK8g', timezone: 'Asia/Tokyo' }]},
         "Australia": { code: "au", cities: [{ name: 'Sydney', lat: -33.86, lon: 151.20, emoji: '🦘', youtubeId: '5uZa3-RMFos', timezone: 'Australia/Sydney' }]}
     }
-};
+}
 
 const clock = document.getElementById('clock')
 const day = document.getElementById('day')
@@ -33,6 +33,8 @@ let activeCity = citiesData["America"]["USA"].cities[0]
 let player
 let isPlayerReady = false
 let timerId
+let isCelsius = localStorage.getItem('isCelsius') === 'false' ? false : true
+let is24Hour = localStorage.getItem('is24Hour') === 'false' ? false : true
 
 const tag = document.createElement('script')
 tag.src = "https://www.youtube.com/iframe_api"
@@ -179,6 +181,31 @@ async function fetchWeather(lat, lon) {
         tempElement.textContent = 'N/A'
     }
 }
+
+function updateTogglesUI() {
+    document.querySelector('#temp-toggle .toggle-btn[data-val="c"]').classList.toggle('active', isCelsius)
+    document.querySelector('#temp-toggle .toggle-btn[data-val="f"]').classList.toggle('active', !isCelsius)
+    
+    document.querySelector('#time-toggle .toggle-btn[data-val="24"]').classList.toggle('active', is24Hour)
+    document.querySelector('#time-toggle .toggle-btn[data-val="12"]').classList.toggle('active', !is24Hour)
+}
+
+document.querySelectorAll('#temp-toggle .toggle-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        isCelsius = e.target.dataset.val === 'c'
+        localStorage.setItem('isCelsius', isCelsius)
+        updateTogglesUI()
+    })
+})
+
+document.querySelectorAll('#time-toggle .toggle-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        is24Hour = e.target.dataset.val === '24'
+        localStorage.setItem('is24Hour', is24Hour)
+        updateTogglesUI()
+    })
+})
+updateTogglesUI()
 
 function updatePlayer(videoId) {
     if (isPlayerReady && player && typeof player.loadVideoById === 'function') {
