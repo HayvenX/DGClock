@@ -1,7 +1,7 @@
 const citiesData = {
     "Pacific": {
         "USA": { code: "us", cities: [
-            { name: 'Honolulu', lat: 21.30, lon: -157.85, emoji: '🌺', youtubeId: '', timezone: 'Pacific/Honolulu' }
+            { name: 'Honolulu', lat: 21.30, lon: -157.85, emoji: '🌺', youtubeId: 'ufVhejzPY7c', timezone: 'Pacific/Honolulu' }
         ]}
     },
     "America": {
@@ -14,15 +14,15 @@ const citiesData = {
             { name: 'New York', lat: 40.71, lon: -74.00, emoji: '🗽', youtubeId: 'z-jYdOIKcTQ', timezone: 'America/New_York' }
         ]},
         "Canada": { code: "ca", cities: [
-            { name: 'Toronto', lat: 43.65, lon: -79.38, emoji: '🍁', youtubeId: '', timezone: 'America/Toronto' }
+            { name: 'Toronto', lat: 43.65, lon: -79.38, emoji: '🍁', youtubeId: 'bbjwotvAvDM', timezone: 'America/Toronto' }
         ]},
         "Brazil": { code: "br", cities: [
-            { name: 'Rio de Janeiro', lat: -22.90, lon: -43.17, emoji: '🏖️', youtubeId: '', timezone: 'America/Sao_Paulo' }
+            { name: 'Rio de Janeiro', lat: -22.90, lon: -43.17, emoji: '🎭', youtubeId: '5iy6o-Se6YE', timezone: 'America/Sao_Paulo' }
         ]}
     },
     "Atlantic": {
         "Iceland": { code: "is", cities: [
-            { name: 'Reykjavik', lat: 64.14, lon: -21.92, emoji: '🌋', youtubeId: '', timezone: 'Atlantic/Reykjavik' }
+            { name: 'Reykjavik', lat: 64.14, lon: -21.92, emoji: '🌋', youtubeId: 'tYgGEC-ESTw', timezone: 'Atlantic/Reykjavik' }
         ]}
     },
     "Arctic": {
@@ -46,12 +46,12 @@ const citiesData = {
     },
     "Africa": {
         "South Africa": { code: "za", cities: [
-            { name: 'Cape Town', lat: -33.92, lon: 18.42, emoji: '🐧', youtubeId: '', timezone: 'Africa/Johannesburg' }
+            { name: 'Cape Town', lat: -33.92, lon: 18.42, emoji: '🐧', youtubeId: 'sLQHfWnMEkE', timezone: 'Africa/Johannesburg' }
         ]}
     },
     "Indian": {
         "Maldives": { code: "mv", cities: [
-            { name: 'Malé', lat: 4.17, lon: 73.50, emoji: '🏝️', youtubeId: '', timezone: 'Indian/Maldives' }
+            { name: 'Malé', lat: 4.17, lon: 73.50, emoji: '🏝️', youtubeId: 'neprxg6F3Sc', timezone: 'Indian/Maldives' }
         ]}
     },
     "Asia": {
