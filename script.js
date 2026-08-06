@@ -4,6 +4,7 @@ const citiesData = {
             { name: 'Honolulu', lat: 21.30, lon: -157.85, emoji: '🌺', youtubeId: 'ufVhejzPY7c', timezone: 'Pacific/Honolulu' }
         ]}
     },
+    
     "America": {
         "USA": { code: "us", cities: [
             { name: 'San Francisco', lat: 37.77, lon: -122.41, emoji: '🌉', youtubeId: 'CXYr04BWvmc', timezone: 'America/Los_Angeles' },
@@ -27,11 +28,13 @@ const citiesData = {
             { name: 'Reykjavik', lat: 64.14, lon: -21.92, emoji: '🌋', youtubeId: 'tYgGEC-ESTw', timezone: 'Atlantic/Reykjavik' }
         ]}
     },
+    
     "Arctic": {
         "Norway": { code: "no", cities: [
             { name: 'Longyearbyen', lat: 78.22, lon: 15.64, emoji: '🐻‍❄️', youtubeId: '', timezone: 'Arctic/Longyearbyen' }
         ]}
     },
+    
     "Europe": {
         "Ireland": { code: "ie", cities: [
             { name: 'Dublin', lat: 53.34, lon: -6.26, emoji: '☘️', youtubeId: '3nyPER2kzqk', timezone: 'Europe/Dublin' }
@@ -49,6 +52,7 @@ const citiesData = {
             { name: 'Tallinn', lat: 59.43, lon: 24.75, emoji: '🏰', youtubeId: 'VhVgZi2lGv0', timezone: 'Europe/Tallinn' }
         ]}
     },
+    
     "Africa": {
         "South Africa": { code: "za", cities: [
             { name: 'Cape Town', lat: -33.92, lon: 18.42, emoji: '🐧', youtubeId: 'sLQHfWnMEkE', timezone: 'Africa/Johannesburg' }
@@ -57,11 +61,13 @@ const citiesData = {
             { name: 'Chobe', lat: -18.30, lon: 25.50, emoji: '🐘', youtubeId: 'iqdRLSdSjWI', timezone: 'Africa/Gaborone' }
         ]}
     },
+    
     "Indian": {
         "Maldives": { code: "mv", cities: [
             { name: 'Malé', lat: 4.17, lon: 73.50, emoji: '🏝️', youtubeId: 'neprxg6F3Sc', timezone: 'Indian/Maldives' }
         ]}
     },
+    
     "Asia": {
         "Israel": { code: "il", cities: [
             { name: 'Jerusalem', lat: 31.76, lon: 35.21, emoji: '🕍', youtubeId: '77akujLn4k8', timezone: 'Asia/Jerusalem' }
@@ -76,11 +82,13 @@ const citiesData = {
             { name: 'Tokyo', lat: 35.68, lon: 139.69, emoji: '🌸', youtubeId: '_k-5U7IeK8g', timezone: 'Asia/Tokyo' }
         ]}
     },
+    
     "Australia": {
         "Australia": { code: "au", cities: [
             { name: 'Sydney', lat: -33.86, lon: 151.20, emoji: '🦘', youtubeId: '5uZa3-RMFos', timezone: 'Australia/Sydney' }
         ]}
     },
+    
     "Antarctica": {
         "Antarctica": { code: "aq", cities: [
             { name: 'McMurdo', lat: -77.84, lon: 166.66, emoji: '❄️', youtubeId: '', timezone: 'Antarctica/McMurdo' }
