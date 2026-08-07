@@ -1,7 +1,7 @@
 const citiesData = {
     "Pacific": {
         "USA": { code: "us", cities: [
-            { name: 'Honolulu', lat: 21.30, lon: -157.85, emoji: '🌺', youtubeId: 'LbPjsX3zApA', timezone: 'Pacific/Honolulu' }
+            { name: 'Honolulu', lat: 21.30, lon: -157.85, emoji: '🌺', youtubeId: 'G1zgkkguCyc', timezone: 'Pacific/Honolulu' }
         ]}
     },
     
