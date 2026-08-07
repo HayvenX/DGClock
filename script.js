@@ -1,7 +1,7 @@
 const citiesData = {
     "Pacific": {
         "USA": { code: "us", cities: [
-            { name: 'Honolulu', lat: 21.30, lon: -157.85, emoji: '🌺', youtubeId: 'ufVhejzPY7c', timezone: 'Pacific/Honolulu' }
+            { name: 'Honolulu', lat: 21.30, lon: -157.85, emoji: '🌺', youtubeId: 'LbPjsX3zApA', timezone: 'Pacific/Honolulu' }
         ]}
     },
     
@@ -337,7 +337,7 @@ function updatePlayer(videoId) {
 
 function getGlobeEmoji(timezone) {
     if (timezone.startsWith('America')) return '🌎'
-    if (timezone.startsWith('Asia') || timezone.startsWith('Australia') || timezone.startsWith('Pacific')) return '🌏'
+    if (timezone.startsWith('Asia') || timezone.startsWith('Australia') || timezone.startsWith('Pacific') || timezone.startsWith('Indian'))  return '🌏'
     return '🌍'
 }
 
