@@ -108,13 +108,17 @@ const hideUiBtn = document.getElementById('hide-ui-btn')
 const hideHint = document.getElementById('hide-hint')
 const searchInput = document.getElementById('city-search')
 const searchResults = document.getElementById('search-results')
+const muteBtn = document.getElementById('mute-btn')
+const volumeSlider = document.getElementById('volume-slider')
 
 
 const savedCityName = localStorage.getItem('lastCity')
 let activeCity = getCityByName(savedCityName) || citiesData["America"]["USA"].cities[0]
+let savedVolume = localStorage.getItem('yt-volume') || 50
 let allCitiesList = []
 let player
 let timerId
+let isMuted = true
 let isUiHidden = false
 let isPlayerReady = false
 let isCelsius = localStorage.getItem('isCelsius') === 'false' ? false : true
@@ -345,6 +349,23 @@ searchInput.addEventListener('input', (e) => {
 document.addEventListener('click', (e) => {
     if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
         searchResults.classList.add('hidden')
+    }
+})
+
+volumeSlider.value = savedVolume
+
+muteBtn.addEventListener('click', () => {
+    if (!isPlayerReady || !player) return
+
+    if (isMuted) {
+        player.unMute()
+        player.setVolume(volumeSlider.value)
+        muteBtn.textContent = '🔊'
+        isMuted = false
+    } else {
+        player.mute()
+        muteBtn.textContent = '🔇'
+        isMuted = true
     }
 })
 
