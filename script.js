@@ -357,6 +357,10 @@ volumeSlider.value = savedVolume
 muteBtn.addEventListener('click', () => {
     if (!isPlayerReady || !player) return
 
+    if (volumeSlider.value == 0) {
+            volumeSlider.value = 50
+            localStorage.setItem('yt-volume', 50)
+        }
     if (isMuted) {
         player.unMute()
         player.setVolume(volumeSlider.value)
@@ -366,6 +370,27 @@ muteBtn.addEventListener('click', () => {
         player.mute()
         muteBtn.textContent = '🔇'
         isMuted = true
+    }
+})
+
+volumeSlider.addEventListener('input', (e) => {
+    if (!isPlayerReady || !player) return
+    
+    const val = parseInt(e.target.value)
+    localStorage.setItem('yt-volume', val)
+    
+    if (val === 0) {
+        player.mute()
+        player.setVolume(0)
+        muteBtn.textContent = '🔇'
+        isMuted = true
+    } else {
+        if (isMuted) {
+            player.unMute()
+            muteBtn.textContent = '🔊'
+            isMuted = false
+        }
+        player.setVolume(val)
     }
 })
 
