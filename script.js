@@ -106,10 +106,13 @@ const timezoneName = document.getElementById('timezone')
 const appOverlay = document.getElementById('app-overlay')
 const hideUiBtn = document.getElementById('hide-ui-btn')
 const hideHint = document.getElementById('hide-hint')
+const searchInput = document.getElementById('city-search')
+const searchResults = document.getElementById('search-results')
 
 
 const savedCityName = localStorage.getItem('lastCity')
 let activeCity = getCityByName(savedCityName) || citiesData["America"]["USA"].cities[0]
+let allCitiesList = []
 let player
 let timerId
 let isUiHidden = false
@@ -288,6 +291,62 @@ function updateTogglesUI() {
     document.querySelector('#time-toggle .toggle-btn[data-val="24"]').classList.toggle('active', is24Hour)
     document.querySelector('#time-toggle .toggle-btn[data-val="12"]').classList.toggle('active', !is24Hour)
 }
+
+for (const region in citiesData) {
+    for (const country in citiesData[region]) {
+        citiesData[region][country].cities.forEach(city => {
+            allCitiesList.push(city)
+        })
+    }
+}
+
+searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase().trim()
+    searchResults.innerHTML = ''
+
+    if (!searchTerm) {
+        searchResults.classList.add('hidden')
+        return
+    }
+
+    const matches = allCitiesList.filter(city => 
+        city.name.toLowerCase().includes(searchTerm)
+    )
+
+    if (matches.length > 0) {
+        searchResults.classList.remove('hidden')
+        
+        matches.forEach(city => {
+            const div = document.createElement('div')
+            div.className = 'search-result-item'
+            div.textContent = `${city.emoji} ${city.name}`
+            
+            div.addEventListener('click', () => {
+                selectCity(city)
+                closeSidebar()
+                
+                searchInput.value = ''
+                searchResults.classList.add('hidden')
+            })
+            
+            searchResults.appendChild(div)
+        })
+    } else {
+        searchResults.classList.remove('hidden')
+        const noResult = document.createElement('div')
+        noResult.className = 'search-result-item'
+        noResult.style.color = 'rgba(255,255,255,0.5)'
+        noResult.style.pointerEvents = 'none'
+        noResult.textContent = 'No cities found'
+        searchResults.appendChild(noResult)
+    }
+})
+
+document.addEventListener('click', (e) => {
+    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.classList.add('hidden')
+    }
+})
 
 document.querySelectorAll('#temp-toggle .toggle-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
