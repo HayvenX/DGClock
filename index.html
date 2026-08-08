@@ -15,6 +15,7 @@
     <div id="video-container">
         <div id="youtube-player" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></div>
     </div>
+    
     <div id="app-overlay">
         <div id="top-bar">
             <button id="menu-btn">☰</button>
@@ -30,6 +31,12 @@
                 <h2>Locations</h2>
                 <button id="close-btn">×</button>
             </div>
+            
+            <div class="search-container">
+                <input type="text" id="city-search" placeholder="Search city... 🔍" autocomplete="off">
+                <div id="search-results" class="search-results hidden"></div>
+            </div>
+            
             <div id="accordion-container"></div>
 
             <div id="sidebar-settings">
@@ -40,6 +47,7 @@
                         <button class="toggle-btn" data-val="f">°F</button>
                     </div>
                 </div>
+                
                 <div class="setting-row">
                     <span>Time Format</span>
                     <div class="toggle-group" id="time-toggle">
