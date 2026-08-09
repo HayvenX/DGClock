@@ -1,101 +1,6 @@
-const citiesData = {
-    "Pacific": {
-        "USA": { code: "us", cities: [
-            { name: 'Honolulu', lat: 21.30, lon: -157.85, emoji: '🌺', youtubeId: 'G1zgkkguCyc', timezone: 'Pacific/Honolulu' }
-        ]}
-    },
-    
-    "America": {
-        "USA": { code: "us", cities: [
-            { name: 'San Francisco', lat: 37.77, lon: -122.41, emoji: '🌉', youtubeId: 'CXYr04BWvmc', timezone: 'America/Los_Angeles' },
-            { name: 'Las Vegas', lat: 36.16, lon: -115.13, emoji: '🎰', youtubeId: '_rmUXOHSf0w', timezone: 'America/Los_Angeles' },
-            { name: 'Chicago', lat: 41.87, lon: -87.62, emoji: '🍕', youtubeId: 'O0UGT7AT3aw', timezone: 'America/Chicago' },
-            { name: 'Miami', lat: 25.76, lon: -80.19, emoji: '🌴', youtubeId: 'PeYZZinH1wI', timezone: 'America/New_York' },
-            { name: 'Warrenton', lat: 38.71, lon: -77.79, emoji: '🌳', youtubeId: 'zu-I5jNHIxI', timezone: 'America/New_York' },
-            { name: 'Washington', lat: 38.90, lon: -77.03, emoji: '🏛️', youtubeId: 'oDCAAfOSqvA', timezone: 'America/New_York' },
-            { name: 'New York', lat: 40.71, lon: -74.00, emoji: '🗽', youtubeId: 'z-jYdOIKcTQ', timezone: 'America/New_York' }
-        ]},
-        "Canada": { code: "ca", cities: [
-            { name: 'Toronto', lat: 43.65, lon: -79.38, emoji: '🍁', youtubeId: 'bbjwotvAvDM', timezone: 'America/Toronto' },
-            { name: 'Niagara Falls', lat: 43.08, lon: -79.07, emoji: '🌊', youtubeId: 'qx7gry390YA', timezone: 'America/Toronto' }
-        ]},
-        "Brazil": { code: "br", cities: [
-            { name: 'Rio de Janeiro', lat: -22.90, lon: -43.17, emoji: '🎭', youtubeId: '5iy6o-Se6YE', timezone: 'America/Sao_Paulo' }
-        ]}
-    },
-    "Atlantic": {
-        "Iceland": { code: "is", cities: [
-            { name: 'Reykjavik', lat: 64.14, lon: -21.92, emoji: '🌋', youtubeId: 'tYgGEC-ESTw', timezone: 'Atlantic/Reykjavik' }
-        ]}
-    },
-    
-    "Arctic": {
-        "Norway": { code: "no", cities: [
-            { name: 'Longyearbyen', lat: 78.22, lon: 15.64, emoji: '🐻‍❄️', youtubeId: '', timezone: 'Arctic/Longyearbyen' }
-        ]}
-    },
-    
-    "Europe": {
-        "Ireland": { code: "ie", cities: [
-            { name: 'Dublin', lat: 53.34, lon: -6.26, emoji: '☘️', youtubeId: '3nyPER2kzqk', timezone: 'Europe/Dublin' }
-        ]},
-        "UK": { code: "gb", cities: [
-            { name: 'London', lat: 51.50, lon: -0.12, emoji: '💂', youtubeId: 'M3EYAY2MftI', timezone: 'Europe/London' }
-        ]},
-        "France": { code: "fr", cities: [
-            { name: 'Paris', lat: 48.85, lon: 2.35, emoji: '🗼', youtubeId: 'OzYp4NRZlwQ', timezone: 'Europe/Paris' }
-        ]},
-        "Spain": { code: "es", cities: [
-            { name: 'Tamariu', lat: 41.91, lon: 3.20, emoji: '🏖️', youtubeId: 'PMhVgTcDd1o', timezone: 'Europe/Madrid' }
-        ]},
-        "Estonia": { code: "ee", cities: [
-            { name: 'Tallinn', lat: 59.43, lon: 24.75, emoji: '🏰', youtubeId: 'VhVgZi2lGv0', timezone: 'Europe/Tallinn' }
-        ]}
-    },
-    
-    "Africa": {
-        "South Africa": { code: "za", cities: [
-            { name: 'Cape Town', lat: -33.92, lon: 18.42, emoji: '🐧', youtubeId: 'sLQHfWnMEkE', timezone: 'Africa/Johannesburg' }
-        ]},
-        "Botswana": { code: "bw", cities: [
-            { name: 'Chobe', lat: -18.30, lon: 25.50, emoji: '🐘', youtubeId: 'iqdRLSdSjWI', timezone: 'Africa/Gaborone' }
-        ]}
-    },
-    
-    "Indian": {
-        "Maldives": { code: "mv", cities: [
-            { name: 'Malé', lat: 4.17, lon: 73.50, emoji: '🏝️', youtubeId: 'neprxg6F3Sc', timezone: 'Indian/Maldives' }
-        ]}
-    },
-    
-    "Asia": {
-        "Israel": { code: "il", cities: [
-            { name: 'Jerusalem', lat: 31.76, lon: 35.21, emoji: '🕍', youtubeId: '77akujLn4k8', timezone: 'Asia/Jerusalem' }
-        ]},
-        "UAE": { code: "ae", cities: [
-            { name: 'Dubai', lat: 25.20, lon: 55.27, emoji: '🏙️', youtubeId: '', timezone: 'Asia/Dubai' }
-        ]},
-        "South Korea": { code: "kr", cities: [
-            { name: 'Seoul', lat: 37.56, lon: 126.97, emoji: '🏯', youtubeId: 'vk5BHoDxXf0', timezone: 'Asia/Seoul' }
-        ]},
-        "Japan": { code: "jp", cities: [
-            { name: 'Tokyo', lat: 35.68, lon: 139.69, emoji: '🌸', youtubeId: '_k-5U7IeK8g', timezone: 'Asia/Tokyo' }
-        ]}
-    },
-    
-    "Australia": {
-        "Australia": { code: "au", cities: [
-            { name: 'Sydney', lat: -33.86, lon: 151.20, emoji: '🦘', youtubeId: '5uZa3-RMFos', timezone: 'Australia/Sydney' }
-        ]}
-    },
-    
-    "Antarctica": {
-        "Antarctica": { code: "aq", cities: [
-            { name: 'McMurdo', lat: -77.84, lon: 166.66, emoji: '❄️', youtubeId: '', timezone: 'Antarctica/McMurdo' }
-        ]}
-    }
-}
-
+// ==========================================
+// 1. DOM ELEMENTS & STATE VARIABLES
+// ==========================================
 const clock = document.getElementById('clock')
 const day = document.getElementById('day')
 const month = document.getElementById('month')
@@ -124,6 +29,17 @@ let isPlayerReady = false
 let isCelsius = localStorage.getItem('isCelsius') === 'false' ? false : true
 let is24Hour = localStorage.getItem('is24Hour') === 'false' ? false : true
 
+for (const region in citiesData) {
+    for (const country in citiesData[region]) {
+        citiesData[region][country].cities.forEach(city => {
+            allCitiesList.push(city)
+        })
+    }
+}
+
+// ==========================================
+// 2. YOUTUBE API & PLAYER SETUP
+// ==========================================
 const tag = document.createElement('script')
 tag.src = "https://www.youtube.com/iframe_api"
 const firstScriptTag = document.getElementsByTagName('script')[0]
@@ -153,6 +69,150 @@ window.onYouTubeIframeAPIReady = function() {
     })
 }
 
+// ==========================================
+// 3. EVENT LISTENERS
+// ==========================================
+
+// --- Volume & Mute Controls ---
+volumeSlider.value = savedVolume
+
+muteBtn.addEventListener('click', () => {
+    if (!isPlayerReady || !player) return
+
+    if (volumeSlider.value == 0) {
+            volumeSlider.value = 50
+            localStorage.setItem('yt-volume', 50)
+        }
+    if (isMuted) {
+        player.unMute()
+        player.setVolume(volumeSlider.value)
+        muteBtn.textContent = '🔊'
+        isMuted = false
+    } else {
+        player.mute()
+        muteBtn.textContent = '🔇'
+        isMuted = true
+    }
+})
+
+volumeSlider.addEventListener('input', (e) => {
+    if (!isPlayerReady || !player) return
+    
+    const val = parseInt(e.target.value)
+    localStorage.setItem('yt-volume', val)
+    
+    if (val === 0) {
+        player.mute()
+        player.setVolume(0)
+        muteBtn.textContent = '🔇'
+        isMuted = true
+    } else {
+        if (isMuted) {
+            player.unMute()
+            muteBtn.textContent = '🔊'
+            isMuted = false
+        }
+        player.setVolume(val)
+    }
+})
+
+// --- Smart Autocomplete Search ---
+searchInput.addEventListener('input', (e) => {
+    const searchTerm = e.target.value.toLowerCase().trim()
+    searchResults.innerHTML = ''
+
+    if (!searchTerm) {
+        searchResults.classList.add('hidden')
+        return
+    }
+
+    const matches = allCitiesList.filter(city => {
+        const nameSearch = city.name.toLowerCase().includes(searchTerm)
+        const tagMatch = city.tags && city.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+        return nameMatch || tagMatch
+    })
+
+    if (matches.length > 0) {
+        searchResults.classList.remove('hidden')
+        
+        matches.forEach(city => {
+            const div = document.createElement('div')
+            div.className = 'search-result-item'
+            div.textContent = `${city.emoji} ${city.name}`
+            
+            div.addEventListener('click', () => {
+                selectCity(city)
+                closeSidebar()
+                searchInput.value = ''
+                searchResults.classList.add('hidden')
+            })
+            
+            searchResults.appendChild(div)
+        })
+    } else {
+        searchResults.classList.remove('hidden')
+        
+        const noResult = document.createElement('div')
+        noResult.className = 'search-result-item'
+        noResult.style.color = 'rgba(255,255,255,0.5)'
+        noResult.style.pointerEvents = 'none'
+        noResult.textContent = 'No cities found'
+        searchResults.appendChild(noResult)
+    }
+})
+
+document.addEventListener('click', (e) => {
+    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+        searchResults.classList.add('hidden')
+    }
+})
+
+// --- Unit Toggles (Temperature & Time Format) ---
+document.querySelectorAll('#temp-toggle .toggle-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        isCelsius = e.target.dataset.val === 'c'
+        localStorage.setItem('isCelsius', isCelsius)
+        
+        updateTogglesUI()
+        fetchWeather(activeCity.lat, activeCity.lon)
+    })
+})
+
+document.querySelectorAll('#time-toggle .toggle-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        is24Hour = e.target.dataset.val === '24'
+        localStorage.setItem('is24Hour', is24Hour)
+        updateTogglesUI()
+        updateDate()
+    })
+})
+
+// --- Hide UI Mode ---
+hideUiBtn.addEventListener('click', (e) => {
+    e.stopPropagation()
+    closeSidebar()
+    
+    appOverlay.classList.add('hidden')
+    isUiHidden = true
+
+    hideHint.classList.add('show')
+    setTimeout(() => {
+        hideHint.classList.remove('show')
+    }, 3000)
+})
+
+document.addEventListener('click', () => {
+    if (isUiHidden) {
+        appOverlay.classList.remove('hidden')
+        hideHint.classList.remove('show')
+        isUiHidden = false
+    }
+})
+
+
+// ==========================================
+// 4. APPLICATION FUNCTIONS
+// ==========================================
 function init() {
     updateDate()
     setupSidebar()
@@ -161,6 +221,77 @@ function init() {
     updateTogglesUI()
     fetchWeather(activeCity.lat, activeCity.lon)
     timerId = setInterval(updateDate, 1000)
+}
+
+function selectCity(city) {
+    activeCity = city
+    localStorage.setItem('lastCity', city.name)
+    
+    updatePlayer(city.youtubeId)
+    updateCityLabels()
+    updateDate()
+    fetchWeather(city.lat, city.lon)
+
+    const oldActiveBtn = document.querySelector('.active-city')
+    if (oldActiveBtn) {
+        oldActiveBtn.classList.remove('active-city')
+    }
+    
+    const newActiveBtn = document.querySelector(`[data-city-name="${city.name}"]`)
+    if (newActiveBtn) {
+        newActiveBtn.classList.add('active-city')
+    }
+}
+
+function getCityByName(cityName) {
+    if (!cityName) return null
+    
+    for (const region in citiesData) {
+        for (const country in citiesData[region]) {
+            const foundCity = citiesData[region][country].cities.find(c => c.name === cityName)
+            if (foundCity) return foundCity
+        }
+    }
+    return null
+}
+
+function updatePlayer(videoId) {
+    if (isPlayerReady && player && typeof player.loadVideoById === 'function') {
+        player.loadVideoById({ 'videoId': videoId })
+    }
+}
+
+async function fetchWeather(lat, lon) {
+    const tempElement = document.getElementById('temperature')
+    const iconElement = document.getElementById('weather-icon')
+    
+    tempElement.textContent = '...' 
+    iconElement.textContent = ''
+
+    try {
+        const tempUnit = isCelsius ? 'celsius' : 'fahrenheit'
+        const unitSymbol = isCelsius ? '°C' : '°F'
+        
+        const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&temperature_unit=${tempUnit}`)
+        if (!response.ok) throw new Error('Помилка API')
+        
+        const data = await response.json()
+        const temp = Math.round(data.current.temperature_2m)
+        const code = data.current.weather_code
+        
+        tempElement.textContent = `${temp}${unitSymbol}`
+        iconElement.textContent = getWeatherEmoji(code)
+    } catch (error) {
+        tempElement.textContent = 'N/A'
+    }
+}
+
+function updateTogglesUI() {
+    document.querySelector('#temp-toggle .toggle-btn[data-val="c"]').classList.toggle('active', isCelsius)
+    document.querySelector('#temp-toggle .toggle-btn[data-val="f"]').classList.toggle('active', !isCelsius)
+    
+    document.querySelector('#time-toggle .toggle-btn[data-val="24"]').classList.toggle('active', is24Hour)
+    document.querySelector('#time-toggle .toggle-btn[data-val="12"]').classList.toggle('active', !is24Hour)
 }
 
 function setupSidebar() {
@@ -231,215 +362,6 @@ function renderAccordion() {
     }
 }
 
-function selectCity(city) {
-    activeCity = city
-    localStorage.setItem('lastCity', city.name)
-    
-    updatePlayer(city.youtubeId)
-    updateCityLabels()
-    updateDate()
-    fetchWeather(city.lat, city.lon)
-
-    const oldActiveBtn = document.querySelector('.active-city')
-    if (oldActiveBtn) {
-        oldActiveBtn.classList.remove('active-city')
-    }
-    
-    const newActiveBtn = document.querySelector(`[data-city-name="${city.name}"]`)
-    if (newActiveBtn) {
-        newActiveBtn.classList.add('active-city')
-    }
-}
-
-function getCityByName(cityName) {
-    if (!cityName) return null
-    
-    for (const region in citiesData) {
-        for (const country in citiesData[region]) {
-            const foundCity = citiesData[region][country].cities.find(c => c.name === cityName)
-            if (foundCity) return foundCity
-        }
-    }
-    return null
-}
-
-async function fetchWeather(lat, lon) {
-    const tempElement = document.getElementById('temperature')
-    const iconElement = document.getElementById('weather-icon')
-    
-    tempElement.textContent = '...' 
-    iconElement.textContent = ''
-
-    try {
-        const tempUnit = isCelsius ? 'celsius' : 'fahrenheit'
-        const unitSymbol = isCelsius ? '°C' : '°F'
-        
-        const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&temperature_unit=${tempUnit}`)
-        if (!response.ok) throw new Error('Помилка API')
-        
-        const data = await response.json()
-        const temp = Math.round(data.current.temperature_2m)
-        const code = data.current.weather_code
-        
-        tempElement.textContent = `${temp}${unitSymbol}`
-        iconElement.textContent = getWeatherEmoji(code)
-    } catch (error) {
-        tempElement.textContent = 'N/A'
-    }
-}
-
-function updateTogglesUI() {
-    document.querySelector('#temp-toggle .toggle-btn[data-val="c"]').classList.toggle('active', isCelsius)
-    document.querySelector('#temp-toggle .toggle-btn[data-val="f"]').classList.toggle('active', !isCelsius)
-    
-    document.querySelector('#time-toggle .toggle-btn[data-val="24"]').classList.toggle('active', is24Hour)
-    document.querySelector('#time-toggle .toggle-btn[data-val="12"]').classList.toggle('active', !is24Hour)
-}
-
-for (const region in citiesData) {
-    for (const country in citiesData[region]) {
-        citiesData[region][country].cities.forEach(city => {
-            allCitiesList.push(city)
-        })
-    }
-}
-
-searchInput.addEventListener('input', (e) => {
-    const searchTerm = e.target.value.toLowerCase().trim()
-    searchResults.innerHTML = ''
-
-    if (!searchTerm) {
-        searchResults.classList.add('hidden')
-        return
-    }
-
-    const matches = allCitiesList.filter(city => 
-        city.name.toLowerCase().includes(searchTerm)
-    )
-
-    if (matches.length > 0) {
-        searchResults.classList.remove('hidden')
-        
-        matches.forEach(city => {
-            const div = document.createElement('div')
-            div.className = 'search-result-item'
-            div.textContent = `${city.emoji} ${city.name}`
-            
-            div.addEventListener('click', () => {
-                selectCity(city)
-                closeSidebar()
-                
-                searchInput.value = ''
-                searchResults.classList.add('hidden')
-            })
-            
-            searchResults.appendChild(div)
-        })
-    } else {
-        searchResults.classList.remove('hidden')
-        const noResult = document.createElement('div')
-        noResult.className = 'search-result-item'
-        noResult.style.color = 'rgba(255,255,255,0.5)'
-        noResult.style.pointerEvents = 'none'
-        noResult.textContent = 'No cities found'
-        searchResults.appendChild(noResult)
-    }
-})
-
-document.addEventListener('click', (e) => {
-    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
-        searchResults.classList.add('hidden')
-    }
-})
-
-volumeSlider.value = savedVolume
-
-muteBtn.addEventListener('click', () => {
-    if (!isPlayerReady || !player) return
-
-    if (volumeSlider.value == 0) {
-            volumeSlider.value = 50
-            localStorage.setItem('yt-volume', 50)
-        }
-    if (isMuted) {
-        player.unMute()
-        player.setVolume(volumeSlider.value)
-        muteBtn.textContent = '🔊'
-        isMuted = false
-    } else {
-        player.mute()
-        muteBtn.textContent = '🔇'
-        isMuted = true
-    }
-})
-
-volumeSlider.addEventListener('input', (e) => {
-    if (!isPlayerReady || !player) return
-    
-    const val = parseInt(e.target.value)
-    localStorage.setItem('yt-volume', val)
-    
-    if (val === 0) {
-        player.mute()
-        player.setVolume(0)
-        muteBtn.textContent = '🔇'
-        isMuted = true
-    } else {
-        if (isMuted) {
-            player.unMute()
-            muteBtn.textContent = '🔊'
-            isMuted = false
-        }
-        player.setVolume(val)
-    }
-})
-
-document.querySelectorAll('#temp-toggle .toggle-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        isCelsius = e.target.dataset.val === 'c'
-        localStorage.setItem('isCelsius', isCelsius)
-        
-        updateTogglesUI()
-        fetchWeather(activeCity.lat, activeCity.lon)
-    })
-})
-
-document.querySelectorAll('#time-toggle .toggle-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        is24Hour = e.target.dataset.val === '24'
-        localStorage.setItem('is24Hour', is24Hour)
-        updateTogglesUI()
-        updateDate()
-    })
-})
-
-hideUiBtn.addEventListener('click', (e) => {
-    e.stopPropagation()
-    closeSidebar()
-    
-    appOverlay.classList.add('hidden')
-    isUiHidden = true
-
-    hideHint.classList.add('show')
-    setTimeout(() => {
-        hideHint.classList.remove('show')
-    }, 3000)
-})
-
-document.addEventListener('click', () => {
-    if (isUiHidden) {
-        appOverlay.classList.remove('hidden')
-        hideHint.classList.remove('show')
-        isUiHidden = false
-    }
-})
-
-function updatePlayer(videoId) {
-    if (isPlayerReady && player && typeof player.loadVideoById === 'function') {
-        player.loadVideoById({ 'videoId': videoId })
-    }
-}
-
 function getGlobeEmoji(timezone) {
     if (timezone.startsWith('America')) return '🌎'
     if (timezone.startsWith('Asia') || timezone.startsWith('Australia') || timezone.startsWith('Pacific') || timezone.startsWith('Indian'))  return '🌏'
@@ -487,4 +409,7 @@ function updateDate() {
     year.innerText = parts.find((part) => part.type === 'year')?.value || ''
 }
 
+// ==========================================
+// 5. APPLICATION INITIALIZATION
+// ==========================================
 init()
