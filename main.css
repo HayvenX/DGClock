@@ -1,3 +1,6 @@
+/* ==========================================
+   1. GLOBAL STYLES & RESET
+   ========================================== */
 body {
     margin: 0;
     padding: 0;
@@ -8,6 +11,9 @@ body {
     overflow: hidden;
 }
 
+/* ==========================================
+   2. BACKGROUND VIDEO
+   ========================================== */
 #video-container {
     position: fixed;
     top: 0;
@@ -32,6 +38,9 @@ body {
     background: #000;
 }
 
+/* ==========================================
+   3. MAIN LAYOUT & TOP BAR
+   ========================================== */
 #app-overlay {
     position: relative;
     z-index: 1;
@@ -72,10 +81,9 @@ body {
     transition: transform 0.2s;
 }
 
-#menu-btn:hover {
-    transform: scale(1.1);
-}
-
+/* ==========================================
+   4. SIDEBAR BASE & OVERLAYS
+   ========================================== */
 #sidebar {
     position: fixed;
     top: 0;
@@ -136,6 +144,9 @@ body {
     line-height: 1;
 }
 
+/* ==========================================
+   5. SEARCH WIDGET
+   ========================================== */
 .search-container {
     padding: 10px 15px 10px 15px;
     position: relative;
@@ -215,6 +226,9 @@ body {
     background: rgba(255, 255, 255, 0.15);
 }
 
+/* ==========================================
+   6. ACCORDION (CITY LIST)
+   ========================================== */
 #accordion-container {
     padding: 0 15px 15px 15px;
     overflow-y: auto;
@@ -320,6 +334,9 @@ body {
     border-color: rgba(255, 255, 255, 0.3);
 }
 
+/* ==========================================
+   7. SIDEBAR SETTINGS (Volume, Toggles)
+   ========================================== */
 #sidebar-settings {
     padding: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -389,7 +406,6 @@ body {
 }
 
 #mute-btn:hover {
-    transform: scale(1.15)
     opacity: 0.8;
 }
 
@@ -449,6 +465,9 @@ body {
     border-color: rgba(255, 255, 255, 0.4);
 }
 
+/* ==========================================
+   8. WIDGETS (CLOCK & DATA INFO)
+   ========================================== */
 #clock-container {
     display: flex;
     justify-content: center;
@@ -491,6 +510,9 @@ body {
     font-weight: 700;
 }
 
+/* ==========================================
+   9. HINTS & TOOLTIPS
+   ========================================== */
 #hide-hint {
     position: fixed;
     top: 50%;
@@ -515,6 +537,9 @@ body {
     opacity: 1;
 }
 
+/* ==========================================
+   10. MEDIA QUERIES (RESPONSIVE)
+   ========================================== */
 @media (max-width: 720px) {
     .info-group {
         flex-direction: column;
