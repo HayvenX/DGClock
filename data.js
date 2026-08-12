@@ -67,7 +67,7 @@ const citiesData = {
         ]},
         "Italy": { code: "it", cities: [
             { name: 'Valtellina, Livigno', lat: 46.53, lon: 10.13, emoji: '⛷️', youtubeId: 'wiiQxxIQ10w', timezone: 'Europe/Rome', tags: ['mountains', 'snow', 'ski', 'alps', 'italy', 'europe', 'nature'] },
-            { name: 'St. Peters Basilica, Rome', lat: 41.90, lon: 12.49, emoji: '🏛️', youtubeId: '89d3tEaqImM', timezone: 'Europe/Rome', tags: ['city', 'europe', 'italy', 'history'] },
+            { name: "St. Peter's Basilica, Rome", lat: 41.90, lon: 12.49, emoji: '🏛️', youtubeId: '89d3tEaqImM', timezone: 'Europe/Rome', tags: ['city', 'europe', 'italy', 'history'] },
             { name: 'Cattolica', lat: 43.96, lon: 12.74, emoji: '🏖️', youtubeId: 'qWlry5rSTBo', timezone: 'Europe/Rome', tags: ['beach', 'ocean', 'italy', 'europe', 'resort'] },
             { name: 'Ponte delle Guglie, Venice', lat: 45.44, lon: 12.31, emoji: '🛶', youtubeId: 'mt7uE-n0YPI', timezone: 'Europe/Rome', tags: ['city', 'europe', 'italy', 'water', 'romantic'] },
             { name: 'Mount Etna, Sicily', lat: 37.75, lon: 14.99, emoji: '🌋', youtubeId: 't4vlFU-ypIw', timezone: 'Europe/Rome', tags: ['volcano', 'nature', 'mountains', 'italy', 'europe'] }
@@ -101,7 +101,7 @@ const citiesData = {
             { name: 'Camp Kuzuma, Chobe', lat: -18.30, lon: 25.50, emoji: '🐘', youtubeId: 'iqdRLSdSjWI', timezone: 'Africa/Gaborone', tags: ['nature', 'animals', 'africa', 'wildlife'] }
         ]},
         "Kenya": { code: "ke", cities: [
-            { name: 'Lentorre', lat: -1.98, lon: 36.05, emoji: '🦍', youtubeId: '', timezone: 'Africa/Nairobi', tags: ['nature', 'animals', 'africa', 'wildlife', 'safari', 'kenya'] }
+            { name: 'Lentorre', lat: -1.98, lon: 36.05, emoji: '🦍', youtubeId: '', timezone: 'Africa/Nairobi', tags: ['nature', 'animals', 'africa', 'wildlife', 'safari', 'kenya'] },
             { name: 'Tsavo National Park', lat: -1.40, lon: 35.00, emoji: '🦁', youtubeId: 'Xe9CPAdyAro', timezone: 'Africa/Nairobi', tags: ['nature', 'animals', 'africa', 'wildlife', 'safari'] }
         ]}
     },
