@@ -1,7 +1,7 @@
 const citiesData = {
     "Pacific": {
         "USA": { code: "us", cities: [
-            { name: 'Honolulu, Hawaii', lat: 21.30, lon: -157.85, emoji: '🌺', youtubeId: 'G1zgkkguCyc', timezone: 'Pacific/Honolulu', tags: ['ocean', 'beach', 'usa', 'nature', 'island'] }
+            { name: 'Kea Lani Resort, Maui', lat: 21.30, lon: -157.85, emoji: '🌺', youtubeId: 'G1zgkkguCyc', timezone: 'Pacific/Honolulu', tags: ['ocean', 'beach', 'usa', 'nature', 'island'] }
         ]},
         "New Zealand": { code: "nz", cities: [
             { name: 'Viaduct Harbour, Auckland', lat: -36.84, lon: 174.76, emoji: '⛵', youtubeId: 'nLCMw_Fh0u0', timezone: 'Pacific/Auckland', tags: ['city', 'ocean', 'bridge', 'new zealand'] }
@@ -101,6 +101,7 @@ const citiesData = {
             { name: 'Camp Kuzuma, Chobe', lat: -18.30, lon: 25.50, emoji: '🐘', youtubeId: 'iqdRLSdSjWI', timezone: 'Africa/Gaborone', tags: ['nature', 'animals', 'africa', 'wildlife'] }
         ]},
         "Kenya": { code: "ke", cities: [
+            { name: 'Lentorre', lat: -1.98, lon: 36.05, emoji: '🦍', youtubeId: '', timezone: 'Africa/Nairobi', tags: ['nature', 'animals', 'africa', 'wildlife', 'safari', 'kenya'] }
             { name: 'Tsavo National Park', lat: -1.40, lon: 35.00, emoji: '🦁', youtubeId: 'Xe9CPAdyAro', timezone: 'Africa/Nairobi', tags: ['nature', 'animals', 'africa', 'wildlife', 'safari'] }
         ]}
     },
@@ -120,6 +121,7 @@ const citiesData = {
             { name: 'Ubud, Bali', lat: -8.40, lon: 115.18, emoji: '🐒', youtubeId: 'xuSvwBMhysw', timezone: 'Asia/Makassar', tags: ['island', 'asia', 'indonesia', 'nature', 'ocean', 'beach'] }
         ]},
         "Taiwan": { code: "tw", cities: [
+            { name: 'Kaohsiung Coast, Taiwan', lat: 22.73, lon: 120.26, emoji: '🌊', youtubeId: 'sKrqs-5Auqo', timezone: 'Asia/Taipei', tags: ['ocean', 'beach', 'coast', 'taiwan', 'asia', 'relax'] },
             { name: 'Xiangshan, Taipei', lat: 25.03, lon: 121.56, emoji: '🍜', youtubeId: 'z_fY1pj1VBw', timezone: 'Asia/Taipei', tags: ['city', 'asia', 'taiwan', 'neon'] }
         ]},
         "South Korea": { code: "kr", cities: [
