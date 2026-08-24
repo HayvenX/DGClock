@@ -53,7 +53,7 @@ const citiesData = {
             { name: 'Dublin, Ireland', lat: 53.34, lon: -6.26, emoji: '☘️', youtubeId: '3nyPER2kzqk', timezone: 'Europe/Dublin', tags: ['city', 'europe', 'ireland'] }
         ]},
         "UK": { code: "gb", cities: [
-            { name: 'Abbey Road, London', lat: 51.50, lon: -0.12, emoji: '💂', youtubeId: 'Fe2ykquvCJ8', timezone: 'Europe/London', tags: ['city', 'europe', 'uk', 'rain', 'popular'] }
+            { name: 'Lake Windermere, UK', lat: 54.41, lon: -2.94, emoji: '🏞️', youtubeId: 'MK6MjpRLPWs', timezone: 'Europe/London', tags: ['lake', 'nature', 'uk', 'england', 'water', 'resort'] }
         ]},
         "France": { code: "fr", cities: [
             { name: 'Eiffel Tower, Paris', lat: 48.85, lon: 2.35, emoji: '🗼', youtubeId: 'OzYp4NRZlwQ', timezone: 'Europe/Paris', tags: ['city', 'europe', 'france', 'romantic', 'popular'] }
