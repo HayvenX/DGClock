@@ -101,7 +101,7 @@ const citiesData = {
             { name: 'Camp Kuzuma, Chobe', lat: -18.30, lon: 25.50, emoji: '🐘', youtubeId: 'iqdRLSdSjWI', timezone: 'Africa/Gaborone', tags: ['nature', 'animals', 'africa', 'wildlife'] }
         ]},
         "Kenya": { code: "ke", cities: [
-            { name: 'Lentorre', lat: -1.98, lon: 36.05, emoji: '🦍', youtubeId: '', timezone: 'Africa/Nairobi', tags: ['nature', 'animals', 'africa', 'wildlife', 'safari', 'kenya'] },
+            { name: 'Lentorre', lat: -1.98, lon: 36.05, emoji: '🦍', youtubeId: 'bEmFpjwMOvs', timezone: 'Africa/Nairobi', tags: ['nature', 'animals', 'africa', 'wildlife', 'safari', 'kenya'] },
             { name: 'Tsavo National Park', lat: -1.40, lon: 35.00, emoji: '🦁', youtubeId: 'Xe9CPAdyAro', timezone: 'Africa/Nairobi', tags: ['nature', 'animals', 'africa', 'wildlife', 'safari'] }
         ]}
     },
