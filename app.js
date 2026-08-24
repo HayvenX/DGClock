@@ -127,7 +127,7 @@ searchInput.addEventListener('input', (e) => {
     }
 
     const matches = allCitiesList.filter(city => {
-        const nameSearch = city.name.toLowerCase().includes(searchTerm)
+        const nameMatch = city.name.toLowerCase().includes(searchTerm)
         const tagMatch = city.tags && city.tags.some(tag => tag.toLowerCase().includes(searchTerm))
         return nameMatch || tagMatch
     })
