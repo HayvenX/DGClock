@@ -53,7 +53,7 @@ const citiesData = {
             { name: 'Dublin, Ireland', lat: 53.34, lon: -6.26, emoji: '☘️', youtubeId: '3nyPER2kzqk', timezone: 'Europe/Dublin', tags: ['city', 'europe', 'ireland'] }
         ]},
         "UK": { code: "gb", cities: [
-            { name: 'Abbey Road, London', lat: 51.50, lon: -0.12, emoji: '💂', youtubeId: 'M3EYAY2MftI', timezone: 'Europe/London', tags: ['city', 'europe', 'uk', 'rain', 'popular'] }
+            { name: 'Abbey Road, London', lat: 51.50, lon: -0.12, emoji: '💂', youtubeId: 'Fe2ykquvCJ8', timezone: 'Europe/London', tags: ['city', 'europe', 'uk', 'rain', 'popular'] }
         ]},
         "France": { code: "fr", cities: [
             { name: 'Eiffel Tower, Paris', lat: 48.85, lon: 2.35, emoji: '🗼', youtubeId: 'OzYp4NRZlwQ', timezone: 'Europe/Paris', tags: ['city', 'europe', 'france', 'romantic', 'popular'] }
@@ -70,7 +70,7 @@ const citiesData = {
             { name: "St. Peter's Basilica, Rome", lat: 41.90, lon: 12.49, emoji: '🏛️', youtubeId: '89d3tEaqImM', timezone: 'Europe/Rome', tags: ['city', 'europe', 'italy', 'history'] },
             { name: 'Cattolica', lat: 43.96, lon: 12.74, emoji: '🏖️', youtubeId: 'qWlry5rSTBo', timezone: 'Europe/Rome', tags: ['beach', 'ocean', 'italy', 'europe', 'resort'] },
             { name: 'Ponte delle Guglie, Venice', lat: 45.44, lon: 12.31, emoji: '🛶', youtubeId: 'mt7uE-n0YPI', timezone: 'Europe/Rome', tags: ['city', 'europe', 'italy', 'water', 'romantic'] },
-            { name: 'Mount Etna, Sicily', lat: 37.75, lon: 14.99, emoji: '🌋', youtubeId: 't4vlFU-ypIw', timezone: 'Europe/Rome', tags: ['volcano', 'nature', 'mountains', 'italy', 'europe'] }
+            { name: 'Mount Etna, Sicily', lat: 37.75, lon: 14.99, emoji: '🌋', youtubeId: 'DrVTj_pIpZE', timezone: 'Europe/Rome', tags: ['volcano', 'nature', 'mountains', 'italy', 'europe'] }
         ]},
         "Vatican": { code: "va", cities: [
             { name: 'Vatican City', lat: 41.90, lon: 12.45, emoji: '⛪', youtubeId: '03pYP2Nmreo', timezone: 'Europe/Vatican', tags: ['city', 'europe', 'history', 'religion', 'vatican'] }
@@ -95,7 +95,7 @@ const citiesData = {
             { name: 'Okaukuejo Waterhole, Etosha', lat: -19.16, lon: 15.91, emoji: '🦒', youtubeId: 'AeMUdOPFcXI', timezone: 'Africa/Windhoek', tags: ['nature', 'animals', 'africa', 'wildlife', 'safari', 'water'] }
         ]},
         "South Africa": { code: "za", cities: [
-            { name: 'Cape Town', lat: -33.92, lon: 18.42, emoji: '🐧', youtubeId: '0wlyyTrO3rE', timezone: 'Africa/Johannesburg', tags: ['city', 'africa', 'ocean', 'nature'] }
+            { name: 'Cape Town', lat: -33.92, lon: 18.42, emoji: '🐧', youtubeId: '5Spmmga0YLU', timezone: 'Africa/Johannesburg', tags: ['city', 'africa', 'ocean', 'nature'] }
         ]},
         "Botswana": { code: "bw", cities: [
             { name: 'Camp Kuzuma, Chobe', lat: -18.30, lon: 25.50, emoji: '🐘', youtubeId: 'iqdRLSdSjWI', timezone: 'Africa/Gaborone', tags: ['nature', 'animals', 'africa', 'wildlife'] }
