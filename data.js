@@ -20,7 +20,7 @@ const citiesData = {
             { name: 'Allegiant Stadium, Las Vegas', lat: 36.16, lon: -115.13, emoji: '🎰', youtubeId: '_rmUXOHSf0w', timezone: 'America/Los_Angeles', tags: ['city', 'usa', 'night', 'neon', 'popular'] },
             { name: 'Jackson Hole Town Square', lat: 43.47, lon: -110.76, emoji: '🦌', youtubeId: '1EiC9bvVGnk', timezone: 'America/Denver', tags: ['nature', 'mountains', 'usa', 'snow', 'cozy'] },
             { name: 'Chicago', lat: 41.87, lon: -87.62, emoji: '🍕', youtubeId: 'O0UGT7AT3aw', timezone: 'America/Chicago', tags: ['city', 'usa'] },
-            { name: 'Port of Miami, Miami', lat: 25.76, lon: -80.19, emoji: '🌴', youtubeId: 'PeYZZinH1wI', timezone: 'America/New_York', tags: ['city', 'usa', 'beach', 'ocean'] },
+            { name: 'Port of Miami, Miami', lat: 25.76, lon: -80.19, emoji: '🌴', youtubeId: 'xsqwSMuz1oA', timezone: 'America/New_York', tags: ['city', 'usa', 'beach', 'ocean'] },
             { name: 'Washington Monument, Washington D.C.', lat: 38.90, lon: -77.03, emoji: '🏛️', youtubeId: 'oDCAAfOSqvA', timezone: 'America/New_York', tags: ['city', 'usa', 'history'] },
             { name: 'Times Square, New York', lat: 40.71, lon: -74.00, emoji: '🗽', youtubeId: 'z-jYdOIKcTQ', timezone: 'America/New_York', tags: ['city', 'usa', 'popular', 'rain'] }
         ]},
@@ -146,7 +146,7 @@ const citiesData = {
 
     "Etc": {
         "Space": { code: "un", cities: [
-            { name: 'ISS, Earth Orbit', lat: 0.00, lon: 0.00, emoji: '🚀', youtubeId: '0FBiyFpV__g', timezone: 'Etc/UTC', tags: ['space', 'orbit', 'global', 'popular', 'earth'] }
+            { name: 'ISS, Earth Orbit', lat: 0.00, lon: 0.00, emoji: '🚀', youtubeId: 'fO9e9jnhYK8', timezone: 'Etc/UTC', tags: ['space', 'orbit', 'global', 'popular', 'earth'] }
         ]}
     }
 }
